@@ -11,13 +11,10 @@ app = Flask(__name__, static_url_path='/static', static_folder='static')
 @app.route('/')
 @app.route('/homepage')
 def home_page():
-    return render_template("homepage.html")
+    return render_template("homepage.html", title="Home Page")
 
 
 @app.route('/gallery')
-# def gallery():
-#     images = os.listdir(os.path.join(app.static_folder, 'gallery_images'))
-#     return render_template("gallery.html", images=images)
 def gallery():
     images = os.listdir(os.path.join(app.static_folder, "gallery_images"))
     return render_template('gallery.html', images=images)

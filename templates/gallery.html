@@ -18,7 +18,7 @@ Gallery - NR
     <main class="container">
         <div class="gallery-container gallery">
             {% for image in images %}
-            <img src="{{ url_for('static', filename='gallery_images/' + image) }}" alt="{{image}}" title="{{image}}">
+            <img src="{{ url_for('static', filename='gallery_images/' + image) }}" alt="{{image}}" ="{{image}}" title="{{image}}">
             {% endfor %}
         </div>
         <button id="btnScrollToTop"> <i class="material-icons">arrow_upward</i></button>
