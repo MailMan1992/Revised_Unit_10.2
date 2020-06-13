@@ -3,8 +3,9 @@ from flask import Flask, render_template
 
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+# Testing something out
+# APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 @app.route('/')
