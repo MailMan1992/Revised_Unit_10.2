@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,
+                      width=device-width, initial-scale=1.0,
+                      minimum-scale=1.0, maximum-scale=1.0,
+                      user-scalable=no">
+    <meta name="keywords"
+          content="Brighton, Jewellery, Brighton Based, Silversmith, Gold, Platinum, Commission, NR Silversmith, N-R Silversmith">
+    <title> {% block title %} {% endblock title %} </title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/grid.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/contact.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/nav.css')}}">
+    {% block head %}
+    {% endblock head %}
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1 class="logo">N-R Silversmith</h1>
+        <ul class='nav-links'>
+
+            <li><a href="/homepage">Home</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/reviews">Reviews</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
+
+
+<script type="text/javascript" src="{{url_for('static', filename='js/nav.js')}}"></script>
+<main>
+    {% block body %}
+    {% endblock body %}
+</main>
+</body>
+</html>

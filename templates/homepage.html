@@ -1,0 +1,44 @@
+{% extends "main_template.html" %}
+
+
+{% block title %}Home - NR{% endblock title %}
+{% block head %}
+<meta name="description" content="NR Silversmith, has over 27 years experience in the jewellery business. If you want
+a custom built design, this is best course of action to take!">
+{% endblock head %}
+
+{% block body %}
+<section>
+    <main>
+        <div class="grid-container">
+            <div class="grid-picture ">
+                <img class="home-img" src="{{url_for('static', filename='images/stock-photo.png')}}" alt="mr-reeds"
+                     title="Mr Reeds">
+
+
+            </div>
+            <div class="home-d">
+                <h2 class="title-head">About Mr Reed.</h2>
+                <p class="p">Mr Reed has over 25 years experience in the jewellery business and is based in Brighton. 7 of those
+                    years were spent
+                    as an
+                    apprenticeship to hone the craft. He also owns a fully equipped workshop for
+                    repairs and custom orders.</p>
+                <p class="p">
+                    He has experience with working with gold, silver and platinum to order or his own style of
+                    design. He also allows
+                    customers to have their own custom designs created with private commissions. He will also buy any
+                    unwanted jewellery
+                    and sell jewellery he has designed.
+                </p>
+                <p class="p">If you are a Harry Potter fan, he has done work for the Great Frog which designed and created most of
+                    the
+                    jewellery in Harry Potter.
+                </p>
+            </div>
+        </div>
+    </main>
+</section>
+
+
+{% endblock body %}

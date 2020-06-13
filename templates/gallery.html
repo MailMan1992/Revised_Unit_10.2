@@ -1,0 +1,28 @@
+{% extends "main_template.html" %}
+{% block title %}
+Gallery - NR
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/gallery_css.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/gallery_grid.css')}}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<script defer src="{{url_for('static', filename='js/modal_img.js')}}"></script>
+<script defer src="{{url_for('static', filename='js/btnUp.js')}}"></script>
+
+{% endblock head %}
+
+{% block body %}
+<section>
+    <main class="container">
+        <div class="gallery-container gallery">
+            {% for image in images %}
+            <img src="{{ url_for('static', filename='gallery_images/' + image) }}" alt="{{image}}" title="{{image}}">
+            {% endfor %}
+        </div>
+        <button id="btnScrollToTop"> <i class="material-icons">arrow_upward</i></button>
+    </main>
+</section>
+
+{% endblock body %}
